@@ -1,0 +1,23 @@
+#LIST
+
+vegetables = [
+"Spinach","Lettuce","Cabbage","Kale","Coriander","Fenugreek leaves",
+"Carrot","Potato","Sweet potato","Radish","Beetroot","Turnip",
+"Tomato","Cucumber","Eggplant","Bell pepper","Pumpkin","Zucchini",
+"Onion","Garlic","Broccoli","Cauliflower","Green beans","Peas","Corn"
+]
+
+print(vegetables)
+print(dir(vegetables))
+print(help(vegetables))
+print(len(vegetables))
+print("pineable" in vegetables)
+
+vegetables[0] = "Pineapple"
+
+for vegetable in vegetables:
+    print(vegetable)
+
+vegetables.append("sugar")
+
+print(vegetables)
