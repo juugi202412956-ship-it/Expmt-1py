@@ -1,0 +1,17 @@
+#class
+class company:
+    name="fji"
+    located="sana_azher"
+    
+    def Ndjamena(self):
+        chari_bagurmi=gunebour
+        print("Ndjamena:",chari_bagurimi)
+
+Tchad=company()
+print(Tchad.name)
+print(Tchad.located)
+Tchad.Ndjamena
+
+OUTPUT
+fji
+sana_azher
