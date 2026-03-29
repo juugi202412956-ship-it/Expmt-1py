@@ -1,0 +1,79 @@
+#tuple
+# Library books
+
+books = (
+    "Harry Potter",
+    "The Hobbit",
+    "The Lord of the Rings",
+    "Pride and Prejudice",
+    "To Kill a Mockingbird",
+    "1984",
+    "The Great Gatsby",
+    "Moby Dick",
+    "The Catcher in the Rye",
+    "Jane Eyre",
+    "War and Peace",
+    "Crime and Punishment",
+    "The Alchemist",
+    "The Little Prince",
+    "Treasure Island"
+)
+
+
+books_list = list(books)
+
+
+books_list.sort()
+print("Sorted list:", books_list)
+
+
+books_list.reverse()
+print("Reversed list:", books_list)
+
+
+print("Index of Harry Potter:", books.index("Harry Potter"))
+
+
+print("Count of The Hobbit:", books.count("The Hobbit"))
+
+
+print("Length:", len(books))
+
+
+temp_list = books_list.copy()
+temp_list.clear()
+print("After clear:", temp_list)
+
+
+books = tuple(books_list)
+
+print("Final tuple:", books)
+
+
+for book in books:
+    print(book)
+
+OUTPUT
+PS C:\Users\dell> & C:/Users/dell/AppData/Local/Programs/Python/Python314/python.exe c:/Users/dell/#tuple.py
+Sorted list: ['1984', 'Crime and Punishment', 'Harry Potter', 'Jane Eyre', 'Moby Dick', 'Pride and Prejudice', 'The Alchemist', 'The Catcher in the Rye', 'The Great Gatsby', 'The Hobbit', 'The Little Prince', 'The Lord of the Rings', 'To Kill a Mockingbird', 'Treasure Island', 'War and Peace']
+Reversed list: ['War and Peace', 'Treasure Island', 'To Kill a Mockingbird', 'The Lord of the Rings', 'The Little Prince', 'The Hobbit', 'The Great Gatsby', 'The Catcher in the Rye', 'The Alchemist', 'Pride and Prejudice', 'Moby Dick', 'Jane Eyre', 'Harry Potter', 'Crime and Punishment', '1984']
+Index of Harry Potter: 0
+Count of The Hobbit: 1
+Length: 15
+After clear: []
+Final tuple: ('War and Peace', 'Treasure Island', 'To Kill a Mockingbird', 'The Lord of the Rings', 'The Little Prince', 'The Hobbit', 'The Great Gatsby', 'The Catcher in the Rye', 'The Alchemist', 'Pride and Prejudice', 'Moby Dick', 'Jane Eyre', 'Harry Potter', 'Crime and Punishment', '1984')
+War and Peace
+Treasure Island
+To Kill a Mockingbird
+The Lord of the Rings
+The Little Prince
+The Hobbit
+The Great Gatsby
+The Catcher in the Rye
+The Alchemist
+Pride and Prejudice
+Moby Dick
+Jane Eyre
+Harry Potter
+Crime and Punishment
+1984
