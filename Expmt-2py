@@ -1,1 +1,21 @@
+#while Loop
+food=input("enter a food you like (pizza):")
 
+while not food == "pizza":
+   print(f"you like {food}")
+   food=input("enter a food you like (pizza):")
+
+
+print("bay")
+
+OUTPUT:
+Enter a food you like (pizza): handburger
+You like handburger
+Enter a food you like (pizza): butter chicken
+You like butter chicken
+Enter a food you like (pizza): biryani
+You like biryani
+Enter a food you like (pizza): kfc
+You like kfc
+Enter a food you like (pizza): pizza
+bye
