@@ -1,0 +1,16 @@
+a = float(input("Enter the value for a: "))
+b = float(input("Enter the value for b: "))
+
+print("The value of (a + b) is:", a + b)
+print("The value of (a - b) is:", a - b)
+print("The value of (a * b) is:", a * b)
+print("The value of (a / b) is:", a / b)
+
+
+OUTPUT
+Enter the value for a: 32
+Enter the value for b: 43
+The value of (a + b) is: 75.0
+The value of (a - b) is: -11.0
+The value of (a * b) is: 1376.0
+The value of (a / b) is: 0.7441860465116279
