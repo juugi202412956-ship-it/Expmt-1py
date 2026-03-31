@@ -1,0 +1,31 @@
+#class
+
+class fruite:
+    def colour (self):
+        print("the colour of fruites")
+class Apple:
+    def colour (self):
+        print("the colour of apple is rad")
+class bananas:
+    def colour (self):
+        print("the colour of banana is yellow")
+class whatermelo:
+    def colour (self):
+        print("the colour of whatermelo is green")
+        
+fr=fruite()
+a=Apple()
+b=bananas()
+w=whatermelo()
+fr.colour()
+a.colour()
+b.colour()
+w.colour()
+
+
+
+output
+the colour of fruites
+the colour of apple is rad
+the colour of banana is yellow
+the colour of whatermelo is green
