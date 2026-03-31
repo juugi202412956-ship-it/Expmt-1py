@@ -1,0 +1,14 @@
+import re
+
+search = "03/03/2026"
+
+match = r"\d{2}/\d{2}/\d{4}"
+
+if re.fullmatch(match, search):
+    print("The valid date")
+else:
+    print("No valid date")
+
+output
+The valid date
+No valid date
