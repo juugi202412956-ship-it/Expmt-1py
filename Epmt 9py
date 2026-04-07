@@ -1,0 +1,28 @@
+#NYMPY AND PANDAS
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# create dataframe (real-life data)
+df = pd.DataFrame({
+    "product": ["Mobile", "Laptop", "Tablet", "Headphones"],
+    "sales": [50, 30, 20, 40]
+})
+
+print(df)
+
+# plot bar chart
+plt.bar(df["product"], df["sales"])
+plt.xlabel("Products")
+plt.ylabel("Number of Sales")
+plt.title("Shop Sales Report")
+
+plt.show()
+
+output
+
+      product  sales
+0      Mobile     50
+1      Laptop     30
+2      Tablet     20
+3  Headphones     40
