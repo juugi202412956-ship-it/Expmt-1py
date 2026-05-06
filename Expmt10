@@ -1,0 +1,155 @@
+1
+#code
+#load
+#cleaning data
+
+import pandas as pd
+
+# Load Data
+
+data = {
+    "Name": ["A", "B", "C", "D", "E", "E"],
+    "Age": [20, 21, None, 22, 20, 20],
+    "Marks": [85, 90, 78, None, 88, 88]
+}
+
+df = pd.DataFrame(data)
+
+print("Original Data:\n")
+print(df)
+
+# Cleaning Data
+
+df["Age"].fillna(df["Age"].mean(), inplace=True)
+df["Marks"].fillna(df["Marks"].mean(), inplace=True)
+
+# Remove duplicates
+df.drop_duplicates(inplace=True)
+
+print("\nCleaned Data:\n")
+print(df)
+
+
+print("\nShape:", df.shape)
+print("\nInfo:\n")
+print(df.info())
+
+print("\nSummary Statistics:\n")
+print(df.describe())
+
+print("\nValue Counts (Names):\n")
+print(df["Name"].value_counts())
+
+
+output
+
+Original Data:
+
+  Name   Age  Marks
+0    A  20.0   85.0
+1    B  21.0   90.0
+2    C   NaN   78.0
+3    D  22.0    NaN
+4    E  20.0   88.0
+5    E  20.0   88.0
+
+Cleaned Data:
+
+  Name   Age  Marks
+0    A  20.0   85.0
+1    B  21.0   90.0
+2    C  20.75  78.0
+3    D  22.0   85.25
+4    E  20.0   88.0
+
+Shape: (5, 3)
+
+Summary Statistics:
+
+        Age      Marks
+count  5.0   5.000000
+mean   20.75 85.250000
+
+2
+#code
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Sample Data
+data = {
+    "Name": ["A", "B", "C", "D", "E"],
+    "Marks": [85, 90, 78, 92, 88],
+    "Age": [20, 21, 19, 22, 20]
+}
+
+df = pd.DataFrame(data)
+
+
+# Line Plot
+
+plt.figure()
+plt.plot(df["Name"], df["Marks"], marker='o')
+plt.title("Line Plot")
+plt.show()
+
+# Bar Chart
+
+plt.figure()
+plt.bar(df["Name"], df["Marks"])
+plt.title("Bar Chart")
+plt.show()
+
+# Histogram
+
+plt.figure()
+plt.hist(df["Marks"], bins=5)
+plt.title("Histogram")
+plt.show()
+
+
+# Scatter Plot
+
+plt.figure()
+plt.scatter(df["Age"], df["Marks"])
+plt.title("Scatter Plot")
+plt.show()
+
+# Box Plot
+
+plt.figure()
+sns.boxplot(x=df["Marks"])
+plt.title("Box Plot")
+plt.show()
+
+plt.figure()
+sns.heatmap(df.corr(), annot=True)
+plt.title("Heatmap")
+plt.show()
+
+output
+
+Marks
+ 95 |        ●
+ 90 |     ●
+ 85 |  ●        ●
+ 80 |     ●
+    ----------------
+      A B C D E
+Frequency
+3 |      █
+2 |   █     █
+1 | █     █
+   ----------------
+   75 80 85 90 95
+   
+Marks
+95 |        ●
+90 |     ●
+85 |  ●       ●
+80 |     ●
+    ----------------
+     19 20 21 22   Age
+   
+      
